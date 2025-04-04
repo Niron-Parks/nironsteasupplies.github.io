@@ -1,0 +1,591 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    background-color: #2f4f4f;
+    color: white;
+    padding: 20px;
+}
+
+/* Links Configuration*/
+ul{
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*  All buttons Configuration*/
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Hides hamburger menu icon in normal view*/
+/* Style for the Hamburger Menu Icon */
+.hamburger {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    top: 20px; /* Adjust vertical positioning */
+    left: 20px; /* Always positioned on the left side */
+    z-index: 1000; /* Ensures it's above other content */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically, if you want */
+    padding: 20px 0;         /* Optional padding */
+}
+/*Navigation bar Configuration*/
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content:flex-end;  /* Align items to the right */
+    align-items:center;
+    gap: 20px; /* Consistent spacing between items */
+    padding: 0;
+    flex-grow: 1;
+    max-width: 800px;  /* Control the maximum width of the nav menu */
+    width: 100%;  /* Take full width */
+    
+}
+
+.navbar ul li {
+    display: inline-block; /* Ensures no overflow */
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: all 0.3s, ease;
+    border-bottom: 2px solid transparent;  /*Keep space reserved. prevents height change when hover is on */ 
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px; /* Adds padding between each menu item*/
+    color: white;
+    font-size: 1.12rem;
+    font-weight: 500;
+    border-radius: 30px; /* makes a border */
+    transition: 0.3s ease; /* the length of time the hover effect transition between each menu option*/
+}
+
+/* Hover for menu links*/
+.navbar .nav-menu .nav-link:hover {
+    margin: 10px auto 0;
+    color: #333333; /*dark text hover*/
+    background:#FF7F50; /* Coral hover background */  
+    font-weight: 600; 
+}
+
+
+
+/*Call to action button Configuration*/
+
+.hero .button .cta-btn{
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    color: white;
+    border-color:white;
+    border-radius: 20px;
+    background: transparent;
+    transition: 0.3s ease;
+}
+
+/* hover effect*/
+.hero .button .cta-btn:hover{
+    border-color: #FF7F50;
+    color: white;
+    background: #FF7F50;
+    font-weight: 600; 
+    box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.473);  /*light gray dropshadow effect*/
+}
+
+
+/* Hero Section Configuration*/
+.hero {
+    background-color: #76c7c0;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+
+.services-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin: 2rem 0 1rem;
+} 
+
+.service {
+    text-align: center;
+    max-width: 300px;
+}
+
+.service img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+
+.service h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+
+.service p {
+    margin-top: 10px;
+}
+/*About us section Configuration*/
+
+/* Main content styling */
+.about-section {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.about-us, .mission, .team {
+    margin-bottom: 40px;
+}
+
+.about-section h2 {
+    color: #004d47; /* Dark teal */
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+.about-section .team-member {
+    display: flex;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.about-section .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.about-section .team-member h3 {
+    color: #004d47; /* Dark teal */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+
+/* Products Section Configuration*/
+.products-section {
+    flex-grow: 1; /* Ensure the section takes up available space */
+    width: 80%;
+    margin: 40px auto;
+    }
+
+.products h2 {
+    color: #004d47;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product-card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 300px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 8px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    color: #004d47;
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.product-card p {
+    color: #333;
+    margin: 10px 0;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #FF7F50; /* Coral for price */
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.buy-btn {
+    background-color: #004d47; /* Dark teal */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #00b8b8; /* Light Aqua on hover */
+}
+
+
+/*  Newsletter Signup Configuration */
+.newsletter-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 50px 0;
+    background-color: #e0f7fa; /* Light cyan background */
+
+}
+
+.signup-form {
+    background-color: #ffffff; /* White background for the form */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.signup-form h2 {
+    color: #004d47;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.signup-form p {
+    color: #004d47;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.signup-form label {
+    font-size: 1.1em;
+    color: #004d47;
+    margin-top: 10px;
+    display: block;
+    text-align: left;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.signup-form input:focus {
+    border-color: #004d47;
+}
+
+.submit-btn {
+    background-color: #004d47;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #00b8b8; /* Light Aqua on hover */
+}
+
+
+.service p {
+    margin-top: 10px;
+}
+
+/* Contact Form  Configuration*/
+/* Main Contact Section */
+.contact-us {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-info h2 {
+    color: #004d47;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.contact-details {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.info-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h3 {
+    color: #004d47;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.info-box p,
+.info-box ul {
+    color: #333;
+    font-size: 1.1em;
+}
+
+.info-box ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.info-box ul li {
+    margin: 5px 0;
+}
+
+
+
+/* Contact Form Section */
+.contact-form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #004d47;
+    font-size: 2.5em;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.contact-form label {
+    font-size: 1.1em;
+    color: #004d47;
+    text-align: left;
+    display: block;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #004d47;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form button {
+    background-color: #004d47; /* Dark teal */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.contact-form button:hover {
+    background-color: #00b8b8; /* Light Aqua on hover */
+}
+
+
+
+/* Footer Section Configuration*/
+.footer-section {
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    width: 100%;
+    
+    margin-top: auto;
+}
+
+/* Media Query for responsiveness */
+@media screen and (max-width: 768px) {
+    
+    /* Ensure navbar uses full width on small screens */
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: #2f4f4f; /* Dark teal for background */
+        width: 30%;
+        display: none; /* Initially hidden */
+        position: absolute;
+        top: 60px;  /* Adjust as needed */
+        left: 0;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+
+    /* Display navbar when the menu is active */
+    .navbar ul.active {
+        display: flex;
+    }
+
+    /* Adjust the link styles for smaller screens */
+    .navbar ul li {
+        margin: 10px 0;
+    }
+
+    .navbar .nav-link {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+
+    /* Hamburger menu */
+    .navbar .hamburger {
+        display: block;
+        top: 20px; /* Adjust vertical positioning */
+        left: 20px; /* Always positioned on the left side */
+        z-index: 1000; /* Ensures it's above other content */
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* Initially hide the navbar links on small screens */
+    .navbar ul li a {
+        font-size: 1.2rem;
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    .team-member {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .team-member img {
+        margin-bottom: 15px;
+    }
+
+    .product-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .product-card {
+        max-width: 280px;
+    }
+
+    .signup-form {
+        width: 90%; /* Ensure the form is responsive on mobile */
+    }
+
+    .contact-form {
+        width: 90%;
+    }
+
+    .contact-info {
+        width: 90%;
+    }
+
+
+}  
